@@ -11,8 +11,11 @@ def max_pairwise_product(numbers):
 
     return max_product
 
+def max_pair_faster(numbers):
+    return(numbers[-1]*numbers[-2]) 
 
 if __name__ == '__main__':
-    input_n = int(input())
+    #input_n = int(input())
     input_numbers = [int(x) for x in input().split()]
-    print(max_pairwise_product(input_numbers))
+    input_numbers.sort()
+    print(max_pair_faster(input_numbers)) #modifies the list
